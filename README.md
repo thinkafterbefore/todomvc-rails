@@ -1,24 +1,10 @@
-# README
+# TodoMVC on Rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The original [TodoMVC](https://github.com/tastejs/todomvc) project has provided examples on many popular MV* frameworks, but the Ruby on Rails framework is not included in their list of examples as it is not a JavaScript framework. 
 
-Things you may want to cover:
+This is just a demo web application using Ruby on Rails whilst using the original CSS file by TodoMVC.
 
-* Ruby version
+## Version
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* [Ruby](https://github.com/ruby/ruby) v2.4.3
+* [Rails](https://github.com/rails/rails) v5.1.5
