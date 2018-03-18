@@ -54,9 +54,9 @@ class TasksController < ApplicationController
     redirect_back(fallback_location: 'tasks')
   end
 
-  # POST '/tasks/clear_all'
-  def clear_all
-    Task.delete_all
+  # POST '/tasks/clear_completed'
+  def clear_completed
+    Task.where(:completed => true).delete_all
     redirect_back(fallback_location: 'tasks')
   end
 

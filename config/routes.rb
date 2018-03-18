@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get '/tasks/active' => 'tasks#index'
    get '/tasks/completed' => 'tasks#index'
   post '/tasks/toggle_complete_all' => 'tasks#toggle_complete_all'
-  post '/tasks/clear_all' => 'tasks#clear_all'
+  post '/tasks/clear_completed' => 'tasks#clear_completed'
   post '/' => 'tasks#create'
   put '/tasks/:id' => 'tasks#update'
   delete '/tasks/:id' => 'tasks#destroy'
