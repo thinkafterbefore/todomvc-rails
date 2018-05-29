@@ -3,18 +3,19 @@ class TasksController < ApplicationController
   # GET '/tasks/active'
   # GET '/tasks/completed'
   def index
-    case params["filter"]
-    when "active"
-      @filter = params["filter"]
+    case params['filter']
+    when 'active'
+      @filter = params['filter']
       @tasks = Task.where(:completed => false).order('tasks.created_at DESC')
     when "completed"
-      @filter = params["filter"]
+      @filter = params['filter']
       @tasks = Task.where(:completed => true).order('tasks.created_at DESC')
     else
       @tasks = Task.all.order('tasks.created_at DESC')
     end
 
     @activeCount = Task.where(:completed => false).count
+    @completedCount = Task.where(:completed => true).count
     @allCompleted = @tasks.length > 0 && @activeCount == 0
   end
 
@@ -46,7 +47,7 @@ class TasksController < ApplicationController
 
   # POST '/tasks/toggle_complete_all'
   def toggle_complete_all
-    if params["complete-all"]
+    if params['complete-all']
       Task.update_all(completed: true)
     else
       Task.update_all(completed: false)
